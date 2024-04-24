@@ -1,11 +1,11 @@
 if [ $# -ne 2 ]; then
-  echo "Необходимо указать две директории"
+  echo "Укажите две директории"
   exit 1
 fi
 src_dir="$1"
 dst_dir="$2"
 if [ ! -d "$src_dir" ]; then
-  echo "Исходная директория не существует"
+  echo "Данная директория не существует"
   exit 1
 fi
 if [ ! -d "$dst_dir" ]; then
@@ -32,4 +32,4 @@ function copy_files {
   done
 }
 copy_files "$src_dir" "$dst_dir"
-echo "Копирование файлов из '$src_dir' в '$dst_dir' завершено."
+echo "Файлы из '$src_dir' в '$dst_dir' скопированы."
